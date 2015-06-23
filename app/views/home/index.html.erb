@@ -9,11 +9,13 @@
 
 </style>
 
-<img src="<%= image_url("logo.png") %>" id="img-logo"></img>
 
-<div class="parallax-wrapper">
+
 
   <body style="height:1000px">
+    <img src="<%= image_url("logo.png") %>" id="img-logo"></img>
+    <div class="parallax-wrapper">
+
     <div class="layer-background parallax-layer"></div>
     <div class="parallax-layer layer-6" id="layer-6"></div>
   </div>
@@ -41,6 +43,7 @@
       </div>
     </nav>
   </div>
+
 
   <div id="content">
     <div class="container" style="padding-top:30px">
@@ -91,9 +94,7 @@
       <div class="bg-gray">
 
         <div class="thank-you" >
-          <div class="container">
-            <h2 class="center standard-header" style="color:#bbb">Sponsors</h1>
-            </div>
+            <center><h2 class="standard-header" style="color:#bbb">Sponsors</h1></center>
           <center><a href="<%= @sponsor_url %>" target="_blank" class="btn-large btn-pretty-sponsor">Become A Sponsor <i class="mdi-action-grade"></i></a></center>
         </div>
 
@@ -157,11 +158,11 @@
 
         <div class="footer" >
 
-          <a href="https://www.twitter.com/hackmizzou" target="_blank" class="footer-splice">
+          <a href="https://www.twitter.com/hackmizzou" target="_blank" class="footer-splice" style="line-height:16px;padding:20px">
             HackMizzou on Twitter <i class="mdi-image-navigate-next"></i>
           </a>
 
-          <a href="https://www.facebook.com/HackMizzou" target="_blank" class="footer-splice-right">
+          <a href="https://www.facebook.com/HackMizzou" target="_blank" class="footer-splice-right" style="line-height:16px;padding:20px">
             HackMizzou on Facebook <i class="mdi-image-navigate-next"></i>
           </a>
 
@@ -171,10 +172,10 @@
           <center>
             <p>
               Comments, questions, concerns? Please let us know at
-          <a href="emailto:contact@hackmizzou.com" class="footer-link">Contact@HackMizzou.com <i class="mdi-image-navigate-next"></i></a>
+          <a href="emailto:contact@hackmizzou.com" class="footer-link">Contact@HackMizzou.com</a>
         </p>
         <p>
-          HackMizzou is organized by the <a href="http://mca.missouri.edu/" class="footer-link" target="_blank">Mizzou Computing Association <i class="mdi-image-navigate-next"></i></a>
+          HackMizzou is organized by the <a href="http://mca.missouri.edu/" class="footer-link" target="_blank">Mizzou Computing Association</a>
         </p>
           </center>
         </div>
@@ -184,7 +185,7 @@
 
 <script>
   $(".button-collapse").sideNav();
-  
+
 </script>
 <script>
   $(document).ready(function(){

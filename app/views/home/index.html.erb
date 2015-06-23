@@ -9,7 +9,7 @@
 
 </style>
 <body>
-  <img src="<%= image_url("logo.png") %>" id="img-logo"></img>
+  <img src="<%= image_url("logo.png") %>" class="fade" id="img-logo"></img>
     <div class="parallax-wrapper">
 
       <div class="layer-background">
@@ -160,25 +160,16 @@
         </p>
           </center>
         </div>
-
       </div>
     </div>
 
 <script>
-  $(".button-collapse").sideNav();
-</script>
-<script>
-  var hasBeenScrolled = false
-  $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-    $(document).scroll(function(){
-      if (!hasBeenScrolled){
-        $('#img-logo').fadeOut(1000);
-        hasBeenScrolled = true;
-      }
-    });
+  $(".button-collapse").sideNav({
+    edge:'left',
+    closeOnClick: true
   });
 </script>
+
 <script>
   $('#submission-form').submit(function(){
     $.post('/people/submit', $('#submission-form').serialize(), function(data){
@@ -194,6 +185,22 @@
     });
     return false;
   })
+</script>
 
+<script>
+$(function(){
+    var targets = $(".fade");
+    if($(window).scrollTop() > 10){
+      targets.hide();
+    }
+    $(window).scroll(function(){
+        var pos = $(window).scrollTop();
+        if(pos > 10){
+            targets.stop(true, false).fadeOut(600);
+        } else {
+            targets.stop(true, false).fadeIn(600);
+        }
+    });
 
+});
 </script>

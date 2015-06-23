@@ -8,27 +8,22 @@
 }
 
 </style>
-
-
-
-
-  <body style="height:1000px">
-    <img src="<%= image_url("logo.png") %>" id="img-logo"></img>
+<body>
+  <img src="<%= image_url("logo.png") %>" id="img-logo"></img>
     <div class="parallax-wrapper">
 
-    <div class="layer-background parallax-layer"></div>
-    <div class="parallax-layer layer-6" id="layer-6"></div>
-  </div>
+      <div class="layer-background">
+        <div class="parallax-layer layer-6" id="layer-6"></div>
+      </div>
+    </div>
 
 
   <div id="nav-div" class="nav">
     <nav id="navbar" style="background-color:#031421">
       <div class="nav-wrapper">
         <a href="/" class="brand-logo standard-header" style="padding-left:10px;color:#eee">HACKMIZZOU</a>
-
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="right hide-on-med-and-down section table-of-contents" style="padding:0px">
-
           <li><a href="#signup">Apply</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#about">About</a></li>
@@ -76,8 +71,8 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="name" name="name" type="text" validate>
-                <label for="name">How Did You Hear About HackMizzou?</label>
+                <input id="hear" name="hear" type="text" validate>
+                <label for="hear">How Did You Hear About HackMizzou?</label>
               </div>
 
             </div>
@@ -97,14 +92,10 @@
             <center><h2 class="standard-header" style="color:#bbb">Sponsors</h1></center>
           <center><a href="<%= @sponsor_url %>" target="_blank" class="btn-large btn-pretty-sponsor">Become A Sponsor <i class="mdi-action-grade"></i></a></center>
         </div>
-
         <div class="container" style="padding-bottom:50px;">
-
-
         </div>
       </div>
       </div>
-
 
       <div class="about-div section scrollspy" id="about" style="padding-bottom:0;background-color:#0b1b28">
         <div class="container">
@@ -122,7 +113,6 @@
 
               </div>
             </p>
-
             <p>
               <div class="about-header">
                 When is HackMizzou?
@@ -131,7 +121,6 @@
                 HackMizzou will take place Friday, October 16th, afternoon through Sunday, October 18th, morning.
               </div>
             </p>
-
             <p>
               <div class="about-header">
                 Who can attend?
@@ -140,7 +129,6 @@
                 Students of any level ranging from upperclassman highschool students to graduate students.
               </div>
             </p>
-
             <p>
               <div class="about-header">
                 What skills do I need to attend?
@@ -149,15 +137,10 @@
                 Minimal development or design knowledge is recommended. Everyone is welcome regardless of skills-- what's most important is that you want to learn something new and create!
               </div>
             </p>
-
-
           </div>
         </div>
       </div>
-
-
         <div class="footer" >
-
           <a href="https://www.twitter.com/hackmizzou" target="_blank" class="footer-splice" style="line-height:16px;padding:20px">
             HackMizzou on Twitter <i class="mdi-image-navigate-next"></i>
           </a>
@@ -165,8 +148,6 @@
           <a href="https://www.facebook.com/HackMizzou" target="_blank" class="footer-splice-right" style="line-height:16px;padding:20px">
             HackMizzou on Facebook <i class="mdi-image-navigate-next"></i>
           </a>
-
-
         </div>
         <div class="footer-exd">
           <center>
@@ -185,13 +166,17 @@
 
 <script>
   $(".button-collapse").sideNav();
-
 </script>
 <script>
+  var hasBeenScrolled = false
   $(document).ready(function(){
     $('.scrollspy').scrollSpy();
-    $('#logo').hide();
-    $('#logo').fadeIn(3000);
+    $(document).scroll(function(){
+      if (!hasBeenScrolled){
+        $('#img-logo').fadeOut(1000);
+        hasBeenScrolled = true;
+      }
+    });
   });
 </script>
 <script>
@@ -199,9 +184,12 @@
     $.post('/people/submit', $('#submission-form').serialize(), function(data){
       if (data.id != null){
         sweetAlert("Awesome!", "We'll keep you updated on all things HackMizzou. Stay tuned!", "success");
+        $('#email').val('');
+        $('#school').val('');
+        $('#hear').val('');
       }
       else {
-        sweetAlert("Uh oh", "You're missing some form input :(", "error");
+        sweetAlert("Uh oh", "You're missing some required info :(", "error");
       }
     });
     return false;

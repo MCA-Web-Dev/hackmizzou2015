@@ -49,7 +49,6 @@ nav{
 
 #img-logo{
   max-width: 90%;
-
   height:auto;
   position: fixed;
   z-index: 5;
@@ -96,7 +95,6 @@ h1#logo{
 
 
 .layer-background{
-  z-index: 1;
   background: image-url("layers-1-6.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -104,10 +102,6 @@ h1#logo{
   background-size: cover;
   height: 100%;
   width: 100%;
-
-
-
-
 }
 //
 // .layer-1{
@@ -149,8 +143,9 @@ h1#logo{
 .layer-6{
   z-index: 6;
   background-image: image-url("layer-6.png");
-  background-repeat: no-repeat;
-  background-size:100%;
+  background-repeat: repeat-x;
+  background-size: contain;
+
 
 }
 

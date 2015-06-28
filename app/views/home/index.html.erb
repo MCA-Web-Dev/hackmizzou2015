@@ -7,17 +7,44 @@
   padding-bottom:40px;
 }
 
+div.s4{
+  display: inline-block;
+  vertical-align: middle;
+  float:none;
+  text-align: center;
+
+}
+#sponsors-container.row{
+    max-height: 115px;
+}
+
 </style>
 <body>
-  <img src="<%= image_url("forest.png") %>" class="fade" id="img-logo"></img>
-    <div class="parallax-wrapper">
-
-      <div class="layer-background">
-        <div class="parallax-layer layer-6" id="layer-6"></div>
+  <div class="fade logo-div">
+    <img src="<%= image_url("forest.png") %>" class="responsive-img" id="img-logo"></img>
+    <div class="row">
+      <div class="col s6">
+        <center>
+          <a class="waves-effect waves-light btn-large" href="#signup">
+            Apply
+          </a>
+        </center>
+      </div>
+      <div class="col s6">
+        <center>
+          <a class="waves-effect waves-light btn-large" href="#sponsors">
+            Sponsor
+          </a>
+        </center>
       </div>
     </div>
+  </div>
+  <div class="parallax-wrapper">
 
-
+    <div class="layer-background">
+      <div class="parallax-layer layer-6" id="layer-6"></div>
+    </div>
+  </div>
   <div id="nav-div" class="nav">
     <nav id="navbar" style="background-color:#031421">
       <div class="nav-wrapper">
@@ -86,13 +113,84 @@
     <div class="sponsors-div section scrollspy" id="sponsors" >
 
 
-      <div class="bg-gray">
+      <div class="bg-gray" style="padding-bottom:0">
 
         <div class="thank-you" >
             <center><h2 class="standard-header" style="color:#bbb">Sponsors</h1></center>
           <center><a href="<%= @sponsor_url %>" target="_blank" class="btn-large btn-pretty-sponsor">Become A Sponsor<i class="mdi-action-grade right"></i></a></center>
         </div>
-        <div class="container" style="padding-bottom:50px;">
+        <div id="sponsors-container" class="container" style="padding:30px 20px;background:#fff;margin-top:30px;">
+          <center><h4 class="standard-header" style="color:#bbb">Previous Sponsors</h4></center>
+          <div class="row">
+            <div class="col s12" id="cohost">
+              <a href="http://www.tradebot.com"><img alt="Tradebot" class="responsive-img" src="<%= image_url("tradebot.jpg") %>"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4">
+              <a href="http://www.att.com"><img alt="Att" class="responsive-img" src="<%= image_url("att.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://aka.ms/StudentLinks"><img alt="Microsoft" class="responsive-img" src="<%= image_url("microsoft.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.google.com"><img alt="Google" class="responsive-img" src="<%= image_url("google.png") %>"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4">
+              <a href="http://www.oberd.com"><img alt="Oberd" class="responsive-img" src="<%= image_url("oberd.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://twilio.com"><img alt="Twilio" class="responsive-img" src="<%= image_url("twilio.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://research.missouri.edu/otmir/"><img alt="Otmir" class="responsive-img" src="<%= image_url("OTMIR.jpg") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.garmin.com"><img alt="Garmin" class="responsive-img" src="<%= image_url("garmin.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.cerner.com"><img alt="Cerner" class="responsive-img" src="<%= image_url("cerner.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.carfax.com"><img alt="Carfax" class="responsive-img" src="<%= image_url("carfax.jpg") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.tiger-institute.org/"><img alt="Tiger inst" class="responsive-img" src="<%= image_url("tiger_inst.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.veteransunited.com"><img alt="Veteransunited" class="responsive-img" src="<%= image_url("veteransUnited.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://go.enterpriseholdings.com/"><img alt="Enterprise" class="responsive-img" src="<%= image_url("enterprise.png") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.columbiaredi.com/"><img alt="Redi" class="responsive-img" src="<%= image_url("redi.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.engineering.missouri.edu"><img alt="Mizzou engineering" class="responsive-img" src="<%= image_url("mizzou_engineering.jpg") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.mlh.io"><img alt="Mlh" class="responsive-img" src="<%= image_url("mlh.png") %>"></a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col s4">
+              <a href="http://www.namecheap.com"><img alt="Namecheap" class="responsive-img" src="<%= image_url("namecheap.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="http://www.stickermule.com"><img alt="Stickermule" class="responsive-img" src="<%= image_url("stickermule.png") %>"></a>
+            </div>
+            <div class="col s4">
+              <a href="https://www.spinfusion.com/www/index.jsp"><img alt="Spinfusion" class="responsive-img" src="<%= image_url("SpinFusion.jpg") %>"></a>
+            </div>
         </div>
       </div>
       </div>
@@ -195,7 +293,7 @@ $(function(){
     }
     $(window).scroll(function(){
         var pos = $(window).scrollTop();
-        if(pos > 10){
+        if(pos > 120){
             targets.stop(true, false).fadeOut(200);
         } else {
             targets.stop(true, false).fadeIn(400);

@@ -48,28 +48,27 @@ nav{
 }
 
 #img-logo{
-  width:45%;
 
-  @media (max-width: 768px) {
-    width:80%;
-  }
+}
 
-  max-width: 90%;
+.logo-div{
+
+  width:320px;
   height:auto;
-  position: fixed;
-  z-index: 5;
+
+
+  position: absolute;
+  z-index: 1000;
   left: 0;
   right: 0;
-  padding-top:64px;
-  top: 0vh;
+  top: 15%;
   margin: 0px auto;
-
 }
 
 h1#logo{
   color:transparent;
   text-align:center;
-  background-image: image-url("logo.png");
+  background-image: image-url("logo.png") ;
   background-position: center top;
   position: fixed;
   background-repeat: no-repeat;
@@ -116,7 +115,7 @@ h1#logo{
 //
 // .layer-1{
 //   z-index: 1;
-//   background-image: image-url("layer-1.png");
+//   background-image: image-url("layer-1.jpg") %>");
 //   background-repeat: no-repeat;
 //   background-size:100% 100%;
 //
@@ -152,8 +151,8 @@ h1#logo{
 
 .layer-6{
   z-index: 6;
-  // background-image: image-url("layer-6.png");
-  // background-image: image-url("forest.png");
+  // background-image: image-url("layer-6.jpg") %>");
+  // background-image: image-url("forest.jpg") %>");
   background-repeat: repeat-x;
   background-size: contain;
 

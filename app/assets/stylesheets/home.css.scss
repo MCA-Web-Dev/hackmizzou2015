@@ -18,7 +18,7 @@ html{
 
 body{
   margin: 0px;
-  background-color: #FEDCC8;
+  background-color: #061A29;
 }
 
 nav{
@@ -39,7 +39,7 @@ nav{
   position: relative;
   z-index: 1000;
   margin-top: -10px;
-  background-color: #031421;
+  background-color: #061A29;
 
 }
 
@@ -101,7 +101,7 @@ h1#logo{
 
 
 .layer-background{
-  background: image-url("layers-1-6.png") no-repeat center center scroll;
+  background: image-url("forest-svg.svg") no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -223,7 +223,7 @@ h1#logo{
 
 #content{
   position: relative;
-  background: #031421;
+  background: #061A29;
 
   z-index: 5;
   color:#eee;

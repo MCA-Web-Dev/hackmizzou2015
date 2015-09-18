@@ -23,6 +23,13 @@ div.s4{
   <div class="fade logo-div">
     <img src="<%= image_url("forest.png") %>" class="responsive-img" id="img-logo"></img>
     <div class="row">
+      <div class="col s12">
+        <div class="standard-header" style="color:#fff;font-size:26px;">
+          <center>HackMizzou will be held in the early spring!</center>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col s6">
         <center>
           <a class="waves-effect waves-light btn-large" href="#signup">
@@ -284,20 +291,4 @@ div.s4{
     });
     return false;
   })
-</script>
-<script>
-$(function(){
-    var targets = $(".fade");
-    if($(window).scrollTop() > 10){
-      targets.hide();
-    }
-    $(window).scroll(function(){
-        var pos = $(window).scrollTop();
-        if(pos > 120){
-            targets.stop(true, false).fadeOut(200);
-        } else {
-            targets.stop(true, false).fadeIn(400);
-        }
-    });
-});
 </script>
